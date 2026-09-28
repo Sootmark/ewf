@@ -1,6 +1,6 @@
 [package]
 name = "ewf"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 rust-version = "1.80"
 description = "Read-only E01 (EWF) images: segments, chunk tables, zlib chunks with Adler-32 checks, embedded MD5/SHA-1 verification, acquisition metadata. Written from scratch."

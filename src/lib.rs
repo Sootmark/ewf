@@ -293,7 +293,6 @@ struct Builder {
 
 #[derive(Debug, Clone, Copy)]
 struct Geometry {
-    chunk_count: u64,
     chunk_size: u64,
     bytes_per_sector: u32,
     media_size: u64,
@@ -453,7 +452,6 @@ fn geometry(bytes: &[u8]) -> io::Result<Geometry> {
         return Err(invalid("impossible E01 geometry"));
     }
     Ok(Geometry {
-        chunk_count,
         chunk_size,
         bytes_per_sector,
         media_size,
