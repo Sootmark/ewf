@@ -1,18 +1,21 @@
 [package]
-name = "ewf"
-version = "0.1.2"
+name = "sootmark-ewf"
+version = "0.1.3"
 edition = "2021"
 rust-version = "1.80"
 description = "Read-only E01 (EWF) images: segments, chunk tables, zlib chunks with Adler-32 checks, embedded MD5/SHA-1 verification, acquisition metadata. Written from scratch."
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Sootmark/ewf"
-publish = false
+homepage = "https://sootmark.com"
+keywords = ["forensics", "dfir", "incident-response"]
+# Sources only: test fixtures (disk images, logs, test keys) stay in the repository.
+include = ["/src", "/README.md", "/LICENSE-APACHE", "/LICENSE-MIT"]
 
 [dependencies]
-common = { git = "https://github.com/Sootmark/common", tag = "v0.3.1", version = "0.3.1" }
+common = { package = "sootmark-common", version = "0.3.2" }
 
 [dev-dependencies]
-disk = { git = "https://github.com/Sootmark/disk", tag = "v0.2.2", version = "0.2.2" }
+disk = { package = "sootmark-disk", version = "0.2.3" }
 proptest = "1"
 
 [lints.rust]

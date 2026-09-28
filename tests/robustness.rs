@@ -3,8 +3,8 @@
 
 use std::io::{Cursor, Read};
 
-use ewf::Ewf;
 use proptest::prelude::*;
+use sootmark_ewf::Ewf;
 
 const COMPRESSED: &[u8] = include_bytes!("fixtures/encase6-best.E01");
 const LEGACY: &[u8] = include_bytes!("fixtures/encase5-fast.E01");

@@ -2,8 +2,13 @@
 
 Read-only E01 (Expert Witness Format) images, written from scratch. The only dependency is [`Sootmark/common`](https://github.com/Sootmark/common) (zlib, Adler-32, MD5, SHA-1).
 
+```toml
+[dependencies]
+sootmark-ewf = "0.1"
+```
+
 ```rust
-let mut image = ewf::Ewf::open_path("FIN-WKS-07.E01".as_ref())?; // finds .E02, .E03, … itself
+let mut image = sootmark_ewf::Ewf::open_path("FIN-WKS-07.E01".as_ref())?; // finds .E02, .E03, … itself
 if let Some(acquisition) = image.acquisition() {
     println!("case {:?}, examiner {:?}", acquisition.case_number, acquisition.examiner);
 }

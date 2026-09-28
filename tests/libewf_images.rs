@@ -8,7 +8,7 @@ use std::path::PathBuf;
 
 use common::sha256::{hex, Sha256};
 use disk::{partitions, NtfsVolume};
-use ewf::Ewf;
+use sootmark_ewf::Ewf;
 
 const RAW_SHA256: &str = "67fb9a797f92d66d444a0bfcf3521f9060da3050fcfb6f37cbdc5af4dffe3ebe";
 const RAW_MD5: &str = "7051d0bae80b472da82c8ff0b96a7738";
@@ -40,7 +40,7 @@ fn every_variant_reads_back_the_raw_disk() {
 
 #[test]
 fn split_images_are_found_and_ordered() {
-    let paths = ewf::segment_paths(&fixture("encase6-split.E01"));
+    let paths = sootmark_ewf::segment_paths(&fixture("encase6-split.E01"));
     let names: Vec<_> = paths
         .iter()
         .map(|p| p.file_name().unwrap().to_string_lossy().into_owned())
