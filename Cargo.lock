@@ -37,20 +37,15 @@ checksum = "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600"
 
 [[package]]
 name = "common"
-version = "0.2.0"
-source = "git+https://github.com/Sootmark/common?tag=v0.2.0#cad01e32bff7353dfbc17023f21ecb5fc7e153d6"
-
-[[package]]
-name = "common"
 version = "0.3.0"
 source = "git+https://github.com/Sootmark/common?tag=v0.3.0#df761c5b0c903b43988e3a8fde5611fac0d0b12a"
 
 [[package]]
 name = "disk"
-version = "0.2.0"
-source = "git+https://github.com/Sootmark/disk?tag=v0.2.0#e421bec8ae919adcc0d2e0bb7080159da089fa14"
+version = "0.2.1"
+source = "git+https://github.com/Sootmark/disk?tag=v0.2.1#2676eba43fa8b721c0a8f35caaeec8115de059a2"
 dependencies = [
- "common 0.2.0",
+ "common",
 ]
 
 [[package]]
@@ -67,7 +62,7 @@ dependencies = [
 name = "ewf"
 version = "0.1.1"
 dependencies = [
- "common 0.3.0",
+ "common",
  "disk",
  "proptest",
 ]
